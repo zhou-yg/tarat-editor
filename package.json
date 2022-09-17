@@ -1,0 +1,42 @@
+{
+  "name": "tarat-editor",
+  "version": "0.0.1",
+  "tarat": {},
+  "description": "a light and private markdown editor powered by tarat.run",
+  "scripts": {
+    "init": "pnpm i && npm run p:dev",
+    "dev": "tarat dev",
+    "build": "tarat build",
+    "start": "tarat start",
+    "p:dev": "prisma migrate dev && prisma generate",
+    "p:gen": "prisma generate",
+    "p:deploy": "prisma migrate deploy",
+    "p:studio": "prisma studio"
+  },
+  "prisma": {
+    "schema": "./models/schema.prisma"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/react-dom": "^18.0.5",
+    "@types/node": "^18.6.2",
+    "@types/react": "^18.0.15",
+    "@types/lodash": "^4.14.182",
+    "tailwindcss": "^3.1.8",
+    "less": "^4.1.2",
+    "tslib": "^2.4.0"
+  },
+  "peerDependencies": {
+    "immer": "^9.0.14",
+    "@prisma/client": "^4.2.1",
+    "prisma": "^4.2.1",
+    "lodash": "^4.17.21",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0",
+    "tarat-connect": "*",
+    "tarat-core": "*",
+    "tarat-server": "*"
+  }
+}
