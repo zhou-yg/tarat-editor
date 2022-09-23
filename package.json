@@ -17,6 +17,11 @@
     "schema": "./models/schema.prisma"
   },
   "dependencies": {
+    "tarat": "*",
+    "tarat-cascading-list": "*",
+    "tarat-user-login-system": "*",
+    "tarat-file-uploader": "*",
+    "tarat-markdown-editor": "*"
   },
   "devDependencies": {
     "@types/react-dom": "^18.0.5",
@@ -35,6 +40,9 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router-dom": "^6.3.0",
-    "tarat": "*"
+    "tarat": "*",
+    "tarat-cascading-list": "*",
+    "tarat-user-login-system": "*",
+    "tarat-file-uploader": "*"
   }
 }
