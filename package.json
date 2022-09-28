@@ -4,7 +4,7 @@
   "tarat": {},
   "description": "a light and private markdown editor powered by tarat.run",
   "scripts": {
-    "init": "pnpm i && npm run p:dev",
+    "bootstrap": "tarat bootstrap",
     "dev": "tarat dev",
     "build": "tarat build",
     "start": "tarat start",

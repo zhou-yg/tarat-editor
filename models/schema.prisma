@@ -25,38 +25,38 @@ model TodoItemX {
   description String?
 }
 
-model Folder {
+model Tarat_cascading_list_Folder {
   id         Int      @id @default(autoincrement())
   createdAt  DateTime @default(now())
   modifiedAt DateTime @default(now())
 
-  rm    Boolean @default(false)
+  rm    Boolean                     @default(false)
   name  String
-  items Item[]
+  items Tarat_cascading_list_Item[]
 }
 
-model Item {
+model Tarat_cascading_list_Item {
   id         Int      @id @default(autoincrement())
   createdAt  DateTime @default(now())
   modifiedAt DateTime @default(now())
 
-  folder   Folder? @relation(references: [id], fields: [folderId])
+  folder   Tarat_cascading_list_Folder? @relation(references: [id], fields: [folderId])
   folderId Int?
 
   name String
 }
 
-model User {
+model Tarat_user_login_system_User {
   id         String   @id @default(cuid())
   createdAt  DateTime @default(now())
   modifiedAt DateTime @default(now())
 
-  name     String       @unique
+  name     String                                                    @unique
   password String
-  avatar2  StorageItem?
+  avatar2  Tarat_user_login_system_Tarat_file_uploader_UploaderItem?
 }
 
-model SessionStore {
+model Tarat_user_login_system_SessionStore {
   id         Int      @id @default(autoincrement())
   createdAt  DateTime @default(now())
   modifiedAt DateTime @default(now())
@@ -65,18 +65,18 @@ model SessionStore {
   userId    String
 }
 
-model StorageItem {
+model Tarat_user_login_system_Tarat_file_uploader_UploaderItem {
   id         Int      @id @default(autoincrement())
   createdAt  DateTime @default(now())
   modifiedAt DateTime @default(now())
 
   name   String
   link   String
-  user   User   @relation(fields: [userId], references: [id])
-  userId String @unique
+  user   Tarat_user_login_system_User @relation(fields: [userId], references: [id])
+  userId String                       @unique
 }
 
-model UploaderItem {
+model Tarat_file_uploader_UploaderItem {
   id         Int      @id @default(autoincrement())
   createdAt  DateTime @default(now())
   modifiedAt DateTime @default(now())
@@ -85,7 +85,7 @@ model UploaderItem {
   link String
 }
 
-model Markdown {
+model Tarat_markdown_editor_Markdown {
   id         Int      @id @default(autoincrement())
   createdAt  DateTime @default(now())
   modifiedAt DateTime @default(now())
