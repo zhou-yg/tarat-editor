@@ -4,17 +4,17 @@
     "folder": "tarat_cascading_list_Folder",
     "item": "tarat_cascading_list_Item"
   },
+  "tarat-file-uploader": {
+    "uploaderItem": "tarat_file_uploader_UploaderItem"
+  },
+  "tarat-markdown-editor": {
+    "markdown": "tarat_markdown_editor_Markdown"
+  },
   "tarat-user-login-system": {
     "user": "tarat_user_login_system_User",
     "sessionStore": "tarat_user_login_system_SessionStore",
     "tarat-file-uploader": {
       "uploaderItem": "tarat_user_login_system_Tarat_file_uploader_UploaderItem"
     }
-  },
-  "tarat-file-uploader": {
-    "uploaderItem": "tarat_file_uploader_UploaderItem"
-  },
-  "tarat-markdown-editor": {
-    "markdown": "tarat_markdown_editor_Markdown"
   }
 }

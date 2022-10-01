@@ -46,6 +46,24 @@ model Tarat_cascading_list_Item {
   name String
 }
 
+model Tarat_file_uploader_UploaderItem {
+  id         Int      @id @default(autoincrement())
+  createdAt  DateTime @default(now())
+  modifiedAt DateTime @default(now())
+
+  name String
+  link String
+}
+
+model Tarat_markdown_editor_Markdown {
+  id         Int      @id @default(autoincrement())
+  createdAt  DateTime @default(now())
+  modifiedAt DateTime @default(now())
+
+  title   String?
+  content String? // equal sqlite.TEXT 
+}
+
 model Tarat_user_login_system_User {
   id         String   @id @default(cuid())
   createdAt  DateTime @default(now())
@@ -74,22 +92,4 @@ model Tarat_user_login_system_Tarat_file_uploader_UploaderItem {
   link   String
   user   Tarat_user_login_system_User @relation(fields: [userId], references: [id])
   userId String                       @unique
-}
-
-model Tarat_file_uploader_UploaderItem {
-  id         Int      @id @default(autoincrement())
-  createdAt  DateTime @default(now())
-  modifiedAt DateTime @default(now())
-
-  name String
-  link String
-}
-
-model Tarat_markdown_editor_Markdown {
-  id         Int      @id @default(autoincrement())
-  createdAt  DateTime @default(now())
-  modifiedAt DateTime @default(now())
-
-  title   String?
-  content String? // equal sqlite.TEXT 
 }
