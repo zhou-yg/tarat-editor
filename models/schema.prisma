@@ -43,7 +43,8 @@ model Tarat_cascading_list_Item {
   folder   Tarat_cascading_list_Folder? @relation(references: [id], fields: [folderId])
   folderId Int?
 
-  name String
+  name     String
+  markdown Tarat_markdown_editor_Markdown?
 }
 
 model Tarat_file_uploader_UploaderItem {
@@ -60,8 +61,10 @@ model Tarat_markdown_editor_Markdown {
   createdAt  DateTime @default(now())
   modifiedAt DateTime @default(now())
 
-  title   String?
-  content String? // equal sqlite.TEXT 
+  title                     String?
+  content                   String? // equal sqlite.TEXT 
+  tarat_cascading_list_Item Tarat_cascading_list_Item @relation(fields: [listItem], references: [id])
+  listItem                  Int                       @unique
 }
 
 model Tarat_user_login_system_User {

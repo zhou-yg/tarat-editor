@@ -1,0 +1,15 @@
+{
+  "extraRelation": [
+    {
+      "from": {
+        "model": "Tarat_cascading_list_Item",
+        "field": "markdown"
+      },
+      "type": "1:1",
+      "to": {
+        "model": "Tarat_markdown_editor_Markdown",
+        "field": "listItem"
+      }
+    }
+  ]
+}
