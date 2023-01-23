@@ -24,12 +24,25 @@ export default function editor (q: { id: number }) {
     return items.find((item) => item.id === newId)    
   })
 
+  // try {
+  //   after(() => {
+  //     if (!currentItem()) {
+  //       cascadingCompose.currentItemId(() => {
+  //         return cascadingCompose.items()[0]?.id
+  //       })
+  //     }
+  //   }, [cascadingCompose.items])
+  // } catch(e) {
+  //   console.error(e)
+  // }
+
   after(() => {
     const cur = currentItem()
-    console.log('[after] cur: ', cur, (cur as any)?.markdown?.id);
-    if ((cur as any)?.markdown?.id) {
+    const cid = (cur as any)?.markdown?.id
+    console.log('[after] cur: ', cur, cid);
+    if (cid) {
       try {
-        mdEditorCompose.currentId(() => (cur as any)?.markdown?.id)
+        mdEditorCompose.currentId(() => cid)
       } catch (error) {
         console.log('[after] error: ', error);
       }

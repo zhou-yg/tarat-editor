@@ -10,3 +10,7 @@
     @apply py-2 px-4 text-black border-x border-y hover:bg-black hover:text-white;
   }
 }
+
+body {
+  background-color: #f5f5f5;
+}
