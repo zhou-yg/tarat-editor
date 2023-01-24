@@ -4,6 +4,7 @@ import { useProgress, useTarat } from 'tarat/connect'
 import Login from 'tarat-user-login-system/dist/views/login'
 import LoginDriver from '@/drivers/compose/login'
 import 'tarat-user-login-system/dist/views/login.css'
+import { Link } from 'react-router-dom'
 
 export default function LoginPage () {
 
